@@ -1,5 +1,4 @@
-package estudos_lingugagem_de_programacao.questao_11_exemplares;
-
+package primeira_aula.Questao_11;
 public class Exemplar {
 
     private int tombo;
