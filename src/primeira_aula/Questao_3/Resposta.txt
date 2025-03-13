@@ -1,0 +1,22 @@
+Considere os métodos declarados na implementação abaixo (houve ocultação intencional do corpo dos métodos). Indique se
+está havendo sobrecarga ou sobrescrita dos mesmos. Em caso de sobrecarga ou sobrescrita, indique sob qual outro método ela
+está ocorrendo.
+
+public class A {
+    ...
+    public A() { ... }
+    public A( int x ) { ... }
+    public void m1() { ... }  // Esse método void m1() foi sobrescrito na classe B que se extende de A
+    public void m1(int h) { ... }
+}
+public class B extends A {
+    ...
+    public B() { ... }
+    public void m1() { ... } // Percebemos que ele possui o mesmo nome na classe B e do tipo void sem retorno, ou seja, mesma assintura
+    public void m1(double x, double y) { ... } // Vemos que esse método é uma sobrecarga da classe A, pois possui os mesmos nomes, mas com assinaturas diferentes.
+    public void m2() { ... }
+}
+
+Resposta: 
+void m1() -> sobrescrito na classe B
+ public void m1(double x, double y) -> sobrecarga na classe B
