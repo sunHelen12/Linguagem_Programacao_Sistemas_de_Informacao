@@ -1,4 +1,4 @@
-package primeira_aula.Questao_1;
+package primeira_aula.Questao_1_e_Questao_2;
 
 public class Data {
     private int dia;
