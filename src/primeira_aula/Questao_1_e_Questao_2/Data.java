@@ -1,5 +1,8 @@
 package primeira_aula.Questao_1_e_Questao_2;
 
+import java.time.LocalDate;
+import java.time.temporal.ChronoUnit;
+
 public class Data {
     private int dia;
     private int mes;
@@ -37,6 +40,15 @@ public class Data {
     
     public String mostrarData(int dia, int mes, int ano){
         return String.format("%02d/%02d/%4d", dia, mes, ano);
+    }     
+
+    public int getDiasTerminaAno(int dia, int mes, int ano) {
+        LocalDate data = LocalDate.of(ano, mes, dia);
+        LocalDate fimDoAno = LocalDate.of(ano, 12, 31);
+
+        int quantidadeDias = (int) ChronoUnit.DAYS.between(data, fimDoAno);
+        
+        return quantidadeDias;
     }
     
 }

@@ -6,5 +6,8 @@ public class Main {
 
         String dataFormatada = data.mostrarData(data.getDia(), data.getMes(), data.getAno());
         System.out.println(dataFormatada);
+
+        int diasRestantes = data.getDiasTerminaAno(data.getDia(), data.getMes(), data.getAno());
+        System.out.println(diasRestantes);
     }
 }
