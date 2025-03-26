@@ -74,6 +74,7 @@ public class ExemplarUtil {
                     }
                     break;
                 case 2:
+                //e se não existir o tombo?
                     System.out.print("Tombo para Habilitar Empréstimo: ");
                     int tomboHabilitar = sc.nextInt();
 
@@ -85,6 +86,7 @@ public class ExemplarUtil {
 
                     break;
                 case 3:
+                //e se não existir o tombo?
                     System.out.print("Tombo para Desabilitar Empréstimo: ");
                     int tomboDesabilitar = sc.nextInt();
 
@@ -95,6 +97,7 @@ public class ExemplarUtil {
                     }
                     break;
                 case 4:
+                //e se não existir o tombo?
                     System.out.print("Tombo para Registrar Empréstimo: ");
                     int tomboEmprestimo = sc.nextInt();
 
@@ -132,7 +135,8 @@ public class ExemplarUtil {
                     System.out.println("Saindo...");
                     break;
                 default:
-                    throw new AssertionError();
+                    System.err.println("Opção inválida!");
+                    
             }
 
         } while (opcao != 0);
