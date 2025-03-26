@@ -54,13 +54,19 @@ public class Exemplar {
         this.quantidadeEmprestimos = quantidadeEmprestimos;
     }
 
-    public void habilitarEmprestimo() {
-        this.aptoEmprestimo = true;
+    public void habilitarEmprestimo() {        
+        if(aptoEmprestimo){
+            System.out.println("Exemplar já está habilitado para empréstimo!");
+        } else {
+            this.aptoEmprestimo = true;
+            System.out.println("Exemplar habilitado para empréstimo!");
+        }        
     }
 
     public void desabilitarEmprestimo() {
         this.aptoEmprestimo = false;
-    }
+        System.out.println("Exemplar não habilitado para empréstimo!");
+    }    
 
     public void adicionarEmprestimo() {
         if (aptoEmprestimo) {
