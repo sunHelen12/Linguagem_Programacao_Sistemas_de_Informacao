@@ -64,9 +64,13 @@ public class Exemplar {
     }
 
     public void desabilitarEmprestimo() {
-        this.aptoEmprestimo = false;
-        System.out.println("Exemplar não habilitado para empréstimo!");
-    }    
+        if(aptoEmprestimo == false){
+            System.out.println("Exemplar já não está habilitado para empréstimo!");
+        } else {
+            this.aptoEmprestimo = false;
+            System.out.println("Exemplar não habilitado para empréstimo!");
+        }       
+    }     
 
     public void adicionarEmprestimo() {
         if (aptoEmprestimo) {

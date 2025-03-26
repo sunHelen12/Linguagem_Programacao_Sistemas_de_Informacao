@@ -15,7 +15,7 @@ public class ExemplarUtil {
         do {
             System.out.printf("""
                     ====================================================================
-                                                MENU - BIBLIOTECA
+                    ||                         MENU - BIBLIOTECA                      ||
                     ====================================================================
                            1. Cadastrar Livro
                            2. Habilitar Empréstimo
@@ -36,7 +36,7 @@ public class ExemplarUtil {
                     while (cont < MAX) {
                         System.out.printf("""
                                 ======================================
-                                        CADASTRO - BIBLIOTECA
+                                ||       CADASTRO - BIBLIOTECA      ||
                                 ======================================
                                 """);
 
@@ -52,7 +52,7 @@ public class ExemplarUtil {
                                 if (e.getTombo() == tombo) {
                                     System.out.println("""
                                             =====================================================================================
-                                                "Número de tombo já registrado! Por favor, insira um número de tombo diferente.
+                                            || Número de tombo já registrado! Por favor, insira um número de tombo diferente.  ||
                                             =====================================================================================
                                             """);                                           
                                     tomboValido = false;
