@@ -5,7 +5,7 @@ import java.util.List;
 import java.util.Scanner;
 
 public class ExemplarUtil {
-    static final int MAX = 3;
+    static final int MAX = 2;
 
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
@@ -36,9 +36,9 @@ public class ExemplarUtil {
                     while (cont < MAX) {
                         System.out.printf("""
                                 ======================================
-                                ||       CADASTRO - BIBLIOTECA      ||
+                                ||       CADASTRO DO LIVRO %d       ||
                                 ======================================
-                                """);
+                                """, cont + 1);
 
                         int tombo;
                         boolean tomboValido;
@@ -78,10 +78,17 @@ public class ExemplarUtil {
                     System.out.print("Tombo para Habilitar Empréstimo: ");
                     int tomboHabilitar = sc.nextInt();
 
+                    boolean tomboNaoEncontrado = true;
+
                     for (Exemplar e : exemplares) {
                         if (e.getTombo() == tomboHabilitar) {
-                            e.habilitarEmprestimo();
+                            e.habilitarEmprestimo(); 
+                            tomboNaoEncontrado = false;                          
                         }
+                    }                    
+
+                    if (tomboNaoEncontrado) {
+                        System.out.println("Tombo não encontrado!");
                     }
 
                     break;
